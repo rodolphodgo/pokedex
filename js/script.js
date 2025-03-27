@@ -47,6 +47,14 @@ const renderPokemon = async (pokemon) => {
         pokemonNumber.innerHTML = '';
         pokemonImage.style.display = 'none';
     }
+    if (data.id > 649){
+        pokemonName.innerHTML = 'Não encontrado';
+        pokemonNumber.innerHTML = '';
+        pokemonImage.style.display = 'none';
+        pokemonType.innerHTML = '';
+        pokemonType2.innerHTML = '';
+    }
+    console.log(data.id)
 }
 
 form.addEventListener('submit', (event) => {
@@ -62,8 +70,10 @@ buttonPrev.addEventListener('click', () => {
 });
 
 buttonNext.addEventListener('click', () => {
-    searchPokemon += 1;
-    renderPokemon(searchPokemon)
+    if (searchPokemon < 649) {
+        searchPokemon += 1;
+        renderPokemon(searchPokemon)
+    }
 });
 
 renderPokemon(searchPokemon)
