@@ -31,6 +31,7 @@ main {
     left: 50%;
     transform: translate(-63%, 20%);
     height: 18%;
+    z-index: 2;
 }
 
 .pokemon_data {
@@ -40,6 +41,22 @@ main {
     top: 54%;
     right: 27%;
     font-size: clamp(8px, 5vw, 25px);
+}
+
+.pokemon_data .pokemon_type {
+    position: absolute;
+    font-size: clamp(4px, 2.5vw, 12.5px);
+    color: #555555;
+    right: 55%;
+    top: 90%;
+}
+
+.pokemon_data .pokemon_type2 {
+    position: absolute;
+    font-size: clamp(4px, 2.5vw, 12.5px);
+    color: #555555;
+    left: 55%;
+    top: 90%;
 }
 
 .pokemon_name {
@@ -92,3 +109,4 @@ main {
     box-shadow: inset -4px 4px 0 #222222;
     font-size: 0.9rem;
 }
+
